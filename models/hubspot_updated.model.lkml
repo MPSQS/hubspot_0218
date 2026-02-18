@@ -64,6 +64,12 @@ explore: channel_metrics {
   label: "Channel Performance"
 }
 
+# SIMPLIFIED Channel Performance (Section D) - Easy to understand
+explore: channel_performance_updated {
+  label: "Channel Performance - Simplified"
+  description: "Clear view of Email, Phone, and LinkedIn performance with response rates and meeting conversions"
+}
+
 # Stale contacts alert (Section E)
 explore: stale_contacts {
   label: "Stale Contacts Alert"

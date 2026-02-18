@@ -62,6 +62,7 @@ view: activities {
     sql: ${TABLE}.call_connected_count ;;
   }
   
+  # Email response tracking
   dimension: email_opened {
     type: yesno
     sql: ${TABLE}.email_opened ;;
@@ -77,6 +78,12 @@ view: activities {
     sql: ${TABLE}.email_replied ;;
   }
   
+  # LinkedIn message response tracking
+  dimension: linkedin_message_replied {
+    type: yesno
+    sql: ${TABLE}.linkedin_message_replied ;;
+  }
+  
   dimension: is_engaged {
     type: yesno
     sql: ${email_opened} = true 
@@ -87,6 +94,7 @@ view: activities {
   dimension: is_interested {
     type: yesno
     sql: ${email_replied} = true 
+      OR ${linkedin_message_replied} = true
       OR ${call_disposition} IN ('interested', 'callback', 'positive', 'appointment set') ;;
   }
   
