@@ -59,6 +59,12 @@ explore: lead_funnel {
   label: "Lead Gen Funnel"
 }
 
+# SIMPLIFIED Lead Gen Funnel (Section C) - 7 progressive stages
+explore: lead_funnel_updated {
+  label: "Lead Gen Funnel - Progressive Stages"
+  description: "7-stage lead generation funnel with conversion rates: Total List → Qualified → In Sequence → Engaged → Interested → Meeting Booked → Sales Funnel"
+}
+
 # Channel performance metrics (Section D)
 explore: channel_metrics {
   label: "Channel Performance"
